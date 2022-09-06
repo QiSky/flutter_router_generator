@@ -1,0 +1,43 @@
+name: flutter_router_generator
+description: A new Flutter project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  flutter_router:
+    git:
+      url: https://github.com/QiSky/flutter_router.git
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner:
+  source_gen:
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.skyqi.flutter_router_generator
+        pluginClass: FlutterRouterGeneratorPlugin
+      ios:
+        pluginClass: FlutterRouterGeneratorPlugin
+      linux:
+        pluginClass: FlutterRouterGeneratorPlugin
+      macos:
+        pluginClass: FlutterRouterGeneratorPlugin
+      windows:
+        pluginClass: FlutterRouterGeneratorPluginCApi
+      web:
+        pluginClass: FlutterRouterGeneratorWeb
+        fileName: flutter_router_generator_web.dart
